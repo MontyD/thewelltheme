@@ -6,7 +6,7 @@
 				<p class="importantText">$tagLine</p>
 			</div>
 			<div class="innerContainer" id="drinksList">
-				<img class="headerImg" src="$ThemeDir/images/stock1.jpg" alt="Coffee">
+				<img class="headerImg" src="$ThemeDir/images/coffee.png" alt="Coffee">
 				<h2> The Drinks </h2>
 				<div class="priceList">
 					<div class="half centerText">

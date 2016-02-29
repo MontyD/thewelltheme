@@ -45,7 +45,7 @@
   var scrollEvents = debounce(function() {
     var doc = document.documentElement;
     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    if (top > 20) {
+    if (top > 5) {
       header.className = 'headerSmall';
     } else {
       header.className = '';

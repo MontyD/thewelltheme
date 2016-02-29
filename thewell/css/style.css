@@ -437,7 +437,8 @@ nav {
     nav ul#desktopNav .narrow {
       vertical-align: baseline; }
       nav ul#desktopNav .narrow a {
-        padding-left: 0; }
+        padding-left: 0;
+        padding-right: 15px; }
         nav ul#desktopNav .narrow a:hover {
           color: #3A4355;
           background-color: #FAFAFA; }
@@ -495,6 +496,9 @@ header.headerSmall {
   height: 100%;
   width: 200px;
   background: #0A1324;
+  background-image: url("../images/cup.png");
+  background-repeat: no-repeat;
+  background-position: 100% 90%;
   top: 0;
   right: -250px;
   z-index: 9999;

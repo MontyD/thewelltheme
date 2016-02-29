@@ -9,32 +9,28 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 <![endif]-->
-  <% if $URLSegment == "home" %>
+  <% if $isHomePage %>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script type="text/javascript">
-    function initializeMap() {var e = document.getElementById("map"),o = new google.maps.LatLng(52.3739128, 0.928362),a = {center: o,zoom: 14,mapTypeId: google.maps.MapTypeId.ROADMAP,scrollwheel: !1},t = new google.maps.Map(e, a);new google.maps.Marker({position: o,map: t,title: "The Little House, Burgate" });}
-    google.maps.event.addDomListener(window, "load", initializeMap);
-  </script>
   <% end_if %>
   <title>$SiteConfig.Title - $Title</title>
 </head>
 
 <body>
-  <% if $URLSegment == "home" %>
+  <% if $isHomePage %>
   <header id="dynaHeader">
   <% else %>
   <header id="dynaHeader" class='headerSmall'>
   <% end_if %>
     <div class="container">
-      <a href="$AbsoluteBaseURL" title="Home"><img id="mainLogo" src="$ThemeDir/images/TheWell-Logo.png" alt="The Well Logo"></a>
-      <h2 class="whiteText"><span id="funSubTitle"></span><span class="blink">|</span></h2>
+      <a href="$AbsoluteBaseURL" title="Home" id="mainLogo"></a>
+      <h2 class="whiteText"><span id="funSubTitle"></span><span class="blink"><noscript>A Coffee Shop</noscript>|</span></h2>
       <nav>
         <ul id="desktopNav">
           <% loop $Menu(1) %>
             <li><a class="$LinkingMode wide" href="$Link" title="$MenuTitle">$MenuTitle</a></li>
           <% end_loop %>
           <li class="narrow">
-            <a id="initialMobile" href="#menu" class="navOnClick">Menu <img src="$ThemeDir/images/menu.png" alt="menu" /></a>
+            <a id="initialMobile" href="#menu" class="navOnClick">Menu</a>
           </li>
         </ul>
         <a href="#menu" title="Show Menu" id="mobileNavButton" class="navOnClick"></a>

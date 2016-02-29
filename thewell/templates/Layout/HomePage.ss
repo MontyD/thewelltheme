@@ -48,7 +48,7 @@
     <div class="fullwidth page map">
       <h2>Find us</h2>
       <span class="address">The Well, High Street, Hopton, Norfolk, IP22 2QX</span>
-      <div id="map" style="width:100%; height: 300px;"></div>
+      <div id="map" style="width:100%; height: 300px;"><noscript><img class="boxed" style="display: block; margin: 0 auto" src="$ThemeDir/images/map.png" alt="Map" /></noscript></div>
     </div>
   </div>
 </div>

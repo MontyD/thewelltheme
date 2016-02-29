@@ -495,6 +495,7 @@ nav {
           background-color: $whiteFont;
         }
         padding-left: 0;
+        padding-right: 15px;
       }
       img {
         width: 30px;
@@ -566,6 +567,9 @@ header.headerSmall {
   height: 100%;
   width: 200px;
   background: $darkHighligh;
+  background-image: url('../images/cup.png');
+  background-repeat: no-repeat;
+  background-position: 100% 90%;
   top: 0;
   right: -250px;
   z-index: 9999;
