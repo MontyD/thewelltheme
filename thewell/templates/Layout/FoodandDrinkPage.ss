@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="innerContainer" id="foodList">
-				<img class="headerImg" src="$ThemeDir/images/stock2.jpg" alt="Coffee">
+				<img class="headerImg" src="$ThemeDir/images/cakes.png" alt="Cakes">
 				<h2> The Food </h2>
 				<div class="priceList">
 					<div class="half centerText">
