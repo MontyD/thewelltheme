@@ -32,6 +32,9 @@ p {
 a {
   color: #3A4355; }
 
+img {
+  border: none; }
+
 span.vMiddle {
   vertical-align: middle; }
 
@@ -566,7 +569,7 @@ header.headerSmall {
   #mobileNav.active li.close img {
     transform: rotate(0deg); }
 
-#overlay {
+#overlay, #ie8overlay {
   display: block;
   position: fixed;
   height: 100%;
@@ -576,14 +579,20 @@ header.headerSmall {
   left: 0;
   padding: 0;
   z-index: 9998;
+  background: #212121;
   background: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s ease, opacity 0.5s ease; }
 
-#overlay.active {
+#overlay.active, #ie8overlay {
   opacity: 1;
   visibility: visible; }
+
+#ie8overlay {
+  color: #ffffff !important; }
+  #ie8overlay a {
+    color: #ffffff; }
 
 table#openingTimes {
   width: 100%; }
@@ -654,7 +663,7 @@ table#openingTimes {
 
 .bible {
   display: inline-block;
-  font-style: italic;
+  font-style: normal;
   width: 95%;
   text-align: justify;
   padding: 2px 0;
@@ -666,6 +675,38 @@ table#openingTimes {
     margin: 0 0 20px 0; }
   .bible p:last-child {
     margin-bottom: 0; }
+
+form#MemberLoginForm_LoginForm {
+  max-width: 400px;
+  margin: 10px auto;
+  border: none; }
+  form#MemberLoginForm_LoginForm fieldset {
+    border: none; }
+  form#MemberLoginForm_LoginForm .left, form#MemberLoginForm_LoginForm .right {
+    border: none !important; }
+  form#MemberLoginForm_LoginForm label {
+    padding-top: 5px; }
+  form#MemberLoginForm_LoginForm #MemberLoginForm_LoginForm_Remember_Holder {
+    text-align: right; }
+  form#MemberLoginForm_LoginForm input[type=checkbox] {
+    margin: 8px 6px 0 0; }
+  form#MemberLoginForm_LoginForm p#ForgotPassword {
+    display: none; }
+  form#MemberLoginForm_LoginForm .middleColumn {
+    position: relative;
+    display: block;
+    height: 40px; }
+    form#MemberLoginForm_LoginForm .middleColumn input[type=text], form#MemberLoginForm_LoginForm .middleColumn input[type=password] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      border-radius: 4px;
+      padding: 5px;
+      border: 1px solid #161F32; }
+      form#MemberLoginForm_LoginForm .middleColumn input[type=text]:focus, form#MemberLoginForm_LoginForm .middleColumn input[type=password]:focus {
+        outline: none;
+        border-color: blue; }
 
 .openAnimation {
   animation: openani 1s ease-out forwards;

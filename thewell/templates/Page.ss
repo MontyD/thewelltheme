@@ -6,9 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <% base_tag %>
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-<![endif]-->
+  <link rel="apple-touch-icon" sizes="57x57" href="$ThemeDir/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="$ThemeDir/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="$ThemeDir/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="$ThemeDir/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="$ThemeDir/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="$ThemeDir/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="$ThemeDir/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="$ThemeDir/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="$ThemeDir/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="$ThemeDir/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="$ThemeDir/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#0A1324">
+  <meta name="msapplication-TileImage" content="$ThemeDir/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#0A1324">
+
   <% if $isHomePage %>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <% end_if %>
@@ -47,6 +62,12 @@
     </li>
   </ul>
   <div id="overlay" class="navOnClick"></div>
+  <!--[if IE 8]>
+    <div id="ie8overlay">
+      <h1>Please upgrade your browser</h1>
+      <p>Unfortunately your browser is rather out of date and will not display this website correctly, <a href="http://browsehappy.com" title="Browse Happy">Click here</a> to upgrade your browser.</p>
+    </div>
+  <![endif]-->
 
   $Layout
 
