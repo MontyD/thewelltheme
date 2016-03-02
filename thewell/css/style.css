@@ -708,6 +708,9 @@ form#MemberLoginForm_LoginForm {
         outline: none;
         border-color: blue; }
 
+.asSpan {
+  display: inline !important; }
+
 .openAnimation {
   animation: openani 1s ease-out forwards;
   animation-iteration-count: 1;

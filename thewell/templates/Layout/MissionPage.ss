@@ -6,9 +6,9 @@
         <div class="importantText">
           <p class="half">$tagLine</p>
         </div>
-        <span class="nextToImg twothirds">
+        <div class="nextToImg twothirds asSpan">
           $Content
-        </span>
+        </div>
         <img src="$MainPhoto.SetWidth(400).URL" alt="The Well" class="boxed floatRight">
       </div>
     </div>

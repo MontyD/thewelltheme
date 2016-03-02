@@ -25,11 +25,11 @@
       <div class="fullwidth page">
         <div class="innerPadding">
           <img src="$MainPhoto.SetWidth(450).URL" alt="The Well" class="boxed floatLeft">
-          <span class="nextToImg paddingTop">
+          <div class="nextToImg paddingTop asSpan">
             $Content
             <a href="./foodanddrink" title="Our Menu" class="linkLikeAButton">Our Menu</a>
             <a href="./mission" title="About The Well" class="linkLikeAButton">Find out more</a>
-          </span>
+          </div>
         </div>
       </div>
     </div>

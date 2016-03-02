@@ -50,10 +50,10 @@
 				<div class="innerContainer supplier">
 					<div class="innerPadding">
 						<img src="$Photo.SetWidth(400).URL" alt="$Name" class="floatLeft boxed">
-						<span class="vMiddle">
+						<div class="vMiddle asSpan">
 						<h3><a href="$Link" title="$Name" target="_blank">$Name</a></h3>
 						<p>$Description</p>
-					</span>
+					</div>
 					</div>
 				</div>
 				<% end_loop %>

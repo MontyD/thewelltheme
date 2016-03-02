@@ -815,6 +815,9 @@ form#MemberLoginForm_LoginForm {
     }
   }
 }
+.asSpan {
+  display: inline !important;
+}
 //** Animations
 .openAnimation {
   animation: openani 1s ease-out forwards;

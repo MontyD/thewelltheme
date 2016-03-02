@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  $MetaTags(false)
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <% base_tag %>
+  <meta property="og:title" content="The Well Hopton Suffolk">
+  <meta property="og:type" content="Website">
+  <meta property="og:image" content="$ThemeDir/images/TheWell-Logo.png"/>
+  <meta property="og:url" content="https://www.thewellhopton.org.uk/"/>
+  <meta property="og:url" content="Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat."/>
   <link rel="apple-touch-icon" sizes="57x57" href="$ThemeDir/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="$ThemeDir/favicons/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="$ThemeDir/favicons/apple-touch-icon-72x72.png">
@@ -23,12 +27,19 @@
   <meta name="msapplication-TileColor" content="#0A1324">
   <meta name="msapplication-TileImage" content="$ThemeDir/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#0A1324">
-
+  <title>$SiteConfig.Title - $Title</title>
   <% if $isHomePage %>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <% end_if %>
-  <title>$SiteConfig.Title - $Title</title>
 </head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-74422232-2', 'auto');
+  ga('send', 'pageview');
+</script>
 
 <body>
   <% if $isHomePage %>
@@ -72,6 +83,24 @@
   $Layout
 
   <div id="fb-root"></div>
+  <footer>
+    <h3> The Well Coffee Shop, Hopton </h3>
+    <p class="small">A not for profit coffeeshop, run by <a href="http://highstreetchapel.org.uk/" title="High Street Chapel">High Street Chapel Hopton</a></p>
+    <p class="small">&#169; Copyright <span id="dateNow"></span> The Well Coffee Shop, All Rights Reserved.</p>
+    <div class="fb-like" data-href="https://www.facebook.com/thewellhopton/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    <p class="vsmall last">Web design by Monty Dawson | <a href="https://icons8.com" title="Icons8" target="_blank">Icon pack by Icons8</a> </p>
+  </footer>
+  <script type="application/ld+json">
+    {
+      "name": "The Well Hopton",
+      "@type": "Organization",
+      "url": "https://www.thewellhopton.org.uk/",
+      "logo": "$ThemeDir/images/TheWell-Logo.png",
+      "sameAs" : [
+        "https://www.facebook.com/thewellhopton/"
+      ]
+    }
+    </script>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -80,13 +109,6 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <footer>
-    <h3> The Well Coffee Shop, Hopton </h3>
-    <p class="small">A not for profit coffeeshop, run by <a href="http://highstreetchapel.org.uk/" title="High Street Chapel">High Street Chapel Hopton</a></p>
-    <p class="small">&#169; Copyright <span id="dateNow"></span> The Well Coffee Shop, All Rights Reserved.</p>
-    <div class="fb-like" data-href="https://www.facebook.com/thewellhopton/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-    <p class="vsmall last">Web design by Monty Dawson | <a href="https://icons8.com" title="Icons8" target="_blank">Icon pack by Icons8</a> </p>
-  </footer>
 </body>
 
 </html>
