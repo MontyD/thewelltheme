@@ -9,7 +9,7 @@
   <meta property="og:type" content="Website">
   <meta property="og:image" content="$ThemeDir/images/TheWell-Logo.png">
   <meta property="og:url" content="https://www.thewellhopton.org.uk/">
-  <meta property="og:url" content="Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat.">
+  <meta property="og:description" content="Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat.">
   <meta name="robots" content="index,follow">
   <link rel="apple-touch-icon" sizes="57x57" href="$ThemeDir/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="$ThemeDir/favicons/apple-touch-icon-60x60.png">
