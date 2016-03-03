@@ -19,9 +19,7 @@
   <link rel="apple-touch-icon" sizes="120x120" href="$ThemeDir/favicons/apple-touch-icon-120x120.png">
   <link rel="apple-touch-icon" sizes="144x144" href="$ThemeDir/favicons/apple-touch-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="$ThemeDir/favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="$ThemeDir/favicons/apple-touch-icon-180x180.png">
   <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="$ThemeDir/favicons/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="$ThemeDir/favicons/favicon-16x16.png" sizes="16x16">
   <link rel="manifest" href="$ThemeDir/favicons/manifest.json">
