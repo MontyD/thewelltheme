@@ -86,7 +86,7 @@
     <p class="small">A not for profit coffeeshop, run by <a href="http://highstreetchapel.org.uk/" title="High Street Chapel">High Street Chapel Hopton</a></p>
     <p class="small">&#169; Copyright <span id="dateNow"></span> The Well Coffee Shop, All Rights Reserved.</p>
     <div class="fb-like" data-href="https://www.facebook.com/thewellhopton/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-    <p class="vsmall last">Web design by Monty Dawson | <a href="https://icons8.com" title="Icons8" target="_blank">Icon pack by Icons8</a> </p>
+    <p class="vsmall last">Web design by <a href="https://www.montydawson.co.uk" title="Monty Dawson Home" target="_blank">Monty Dawson</a> | <a href="https://icons8.com" title="Icons8" target="_blank">Icon pack by Icons8</a> </p>
   </footer>
   <script type="application/ld+json">
     {
