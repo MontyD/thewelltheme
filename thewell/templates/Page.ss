@@ -7,9 +7,10 @@
   <% base_tag %>
   <meta property="og:title" content="The Well Hopton Suffolk">
   <meta property="og:type" content="Website">
-  <meta property="og:image" content="$ThemeDir/images/TheWell-Logo.png"/>
-  <meta property="og:url" content="https://www.thewellhopton.org.uk/"/>
-  <meta property="og:url" content="Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat."/>
+  <meta property="og:image" content="$ThemeDir/images/TheWell-Logo.png">
+  <meta property="og:url" content="https://www.thewellhopton.org.uk/">
+  <meta property="og:url" content="Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat.">
+  <meta name="robots" content="index,follow">
   <link rel="apple-touch-icon" sizes="57x57" href="$ThemeDir/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="$ThemeDir/favicons/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="$ThemeDir/favicons/apple-touch-icon-72x72.png">
@@ -31,16 +32,15 @@
   <% if $isHomePage %>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <% end_if %>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74422232-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-74422232-2', 'auto');
-  ga('send', 'pageview');
-</script>
-
 <body>
   <% if $isHomePage %>
   <header id="dynaHeader">
