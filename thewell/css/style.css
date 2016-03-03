@@ -69,6 +69,11 @@ header {
     max-width: 400px;
     transition: none !important; }
 
+.noJS header {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .contentSpacer {
   display: block;
   margin-top: 90px;
@@ -286,7 +291,9 @@ a.linkLikeAButton {
 .fullwidth {
   clear: both;
   display: block;
-  width: 100%;
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;
   border-bottom: 3px solid #0A1324 !important; }
   .fullwidth h1 {
     z-index: 2; }
@@ -734,7 +741,9 @@ form#MemberLoginForm_LoginForm {
   .twothirds {
     margin-bottom: 20px;
     display: block;
-    width: 100%; }
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto; }
 
   .onethird {
     float: none;

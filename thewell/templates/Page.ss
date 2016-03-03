@@ -39,7 +39,7 @@
     ga('send', 'pageview');
   </script>
 </head>
-<body>
+<body class="noJS">
   <% if $isHomePage %>
   <header id="dynaHeader">
   <% else %>
@@ -47,7 +47,7 @@
   <% end_if %>
     <div class="container">
       <a href="$AbsoluteBaseURL" title="Home" id="mainLogo"></a>
-      <h2 class="whiteText"><span id="funSubTitle"></span><span class="blink"><noscript>A Coffee Shop</noscript>|</span></h2>
+      <h2 class="whiteText"><span id="funSubTitle"></span><noscript>A Coffee Shop</noscript><span class="blink">|</span></h2>
       <nav>
         <ul id="desktopNav">
           <% loop $Menu(1) %>

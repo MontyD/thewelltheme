@@ -17,6 +17,11 @@ function addEvent(evnt, elem, func) {
   'use strict';
 
   //*********************
+  //** Javascript loaded, remove 'noJS' class from body
+  //*********************
+  document.body.className = "";
+
+  //*********************
   //** Subtitle Animation
   //*********************
   var subtitleItems = ["A Coffee Shop", "A Place of Refreshing", "A Resting-point", "A Place to Chat"],
