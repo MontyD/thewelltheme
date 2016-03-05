@@ -177,7 +177,7 @@ header {
   display: inline-block;
   width: 50%;
   vertical-align: top; }
-  @media (max-width: 740px) {
+  @media (max-width: 915px) {
     .half {
       width: 95%;
       display: block;
