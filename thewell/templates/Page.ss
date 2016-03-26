@@ -28,7 +28,8 @@
   <meta name="theme-color" content="#0A1324">
   <title>$SiteConfig.Title - $Title</title>
   <% if $isHomePage %>
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-RwSzMYboJ-KL0Eb1N_erM26tuAZzdGo	
+"></script>
   <% end_if %>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
