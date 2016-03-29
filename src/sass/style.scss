@@ -160,6 +160,9 @@ header {
   padding: 0;
   text-align: left;
   border-left: 3px solid $darkHighligh !important;
+  @media (max-width:600px) {
+    width: 95%;
+  }
   .headerImg {
     width: 100%;
     position: absolute;
@@ -348,6 +351,9 @@ a.linkLikeAButton {
       right: 0;
       z-index: 0;
       margin: 16px auto;
+      @media(max-width: 450px) {
+        display: none;
+      }
     }
   }
 }
@@ -880,6 +886,11 @@ form#MemberLoginForm_LoginForm {
   }
   h1 {
     text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .onethird {
+    width: 95%;
   }
 }
 @media (max-width: 650px) {
