@@ -13,11 +13,11 @@ module.exports = function ( grunt ) {
 		},
 		autoprefixer: {
 	    options: {
-	      browserlist : "> 5%"
+	      browsers: ['last 5 versions']
 	    },
 			dist: {
 						files: {
-								'thewell/css/style.css': 'dist/css/style.css'
+								'thewell/css/style.css': 'thewell/css/style.css'
 						}
 				}
 	  },
@@ -65,6 +65,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks( 'grunt-notify' );
 
-	grunt.registerTask( 'default', [ 'sass', 'cssmin', 'jshint', 'uglify', 'concurrent' ] );
+	grunt.registerTask( 'default', [ 'sass','autoprefixer', 'cssmin', 'jshint', 'uglify', 'concurrent' ] );
 
 };

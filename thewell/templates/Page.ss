@@ -45,6 +45,7 @@
   <% else %>
   <header id="dynaHeader" class='headerSmall'>
   <% end_if %>
+    <div class="background-brown"></div>
     <div class="container">
       <a href="$AbsoluteBaseURL" title="Home" id="mainLogo"></a>
       <h2 class="whiteText"><span id="funSubTitle"></span><noscript>A Coffee Shop</noscript><span class="blink">|</span></h2>
