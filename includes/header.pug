@@ -1,0 +1,22 @@
+header
+    img(src='/images/TheWell-Logo.png' alt='The Well Logo')
+    h2
+        span#writing-sub-title
+        noscript A Coffee Shop
+        span.blink |
+    nav
+    ul#desktopNav
+        li
+        a.wide(href='/' title='Home') Home
+        a.wide(href='/foodanddrink.pug' title='Food and Drink') Food and Drink
+        a.wide(href='/mission.pug' title='The Mission') The Mission
+        li.narrow
+        a#initialMobile.navOnClick(href='#menu') Menu
+    a#mobileNavButton.navOnClick(href='#menu' title='Show Menu')
+ul#mobileNav
+li
+    a.wide(class='$LinkingMode' href='$Link' title='$MenuTitle') $MenuTitle
+li.close
+    a#closeMobileNav.navOnClick(href='#closeNav' title='close')
+    img(src='/images/close.png' alt='Close')
+#overlay.navOnClick
