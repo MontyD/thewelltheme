@@ -1,3 +1,9 @@
 doctype html
 html
   include includes/head.html
+
+body
+  include includes/header.pug
+  +header(true)
+  include includes/footer.pug
+  include includes/scripts.html

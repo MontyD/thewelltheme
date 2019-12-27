@@ -1,0 +1,12 @@
+.blink {
+  animation: 1.2s blink infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    color: $white;
+  }
+  50% {
+    color: transparent;
+  }
+}

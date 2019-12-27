@@ -1,0 +1,23 @@
+header {
+    display: block;
+    text-align: center;
+    padding: 1rem 0 2rem;
+    margin: 0 0 2rem;
+    background: linear-gradient(150deg, $brown 0%, $brown 50%, darken($brown, 3%) 50%, darken($brown, 4%) 100%);
+}
+
+header.small {
+    padding: 1rem 0;
+    text-align: left;
+    img {
+        height: 50px;
+    }
+    h2 {
+        display: inline-block;
+        margin: 0.9rem;
+        vertical-align: top;
+    }
+    nav {
+        float: right;
+    }
+}
