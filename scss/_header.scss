@@ -4,6 +4,10 @@ header {
     padding: 1rem 0 2rem;
     margin: 0 0 2rem;
     background: linear-gradient(150deg, $brown 0%, $brown 50%, darken($brown, 3%) 50%, darken($brown, 4%) 100%);
+
+    h2 {
+        color: $white;
+    }
 }
 
 header.small {
