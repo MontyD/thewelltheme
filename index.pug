@@ -1,0 +1,36 @@
+doctype html
+html
+  include includes/head.html
+
+body
+  header
+      a#mainLogo(href='/' title='Home')
+      h2.whiteText
+        span#funSubTitle
+        noscript A Coffee Shop
+        span.blink |
+      nav
+        ul#desktopNav
+          li
+            a.wide(href='/' title='Home') Home
+            a.wide(href='/foodanddrink' title='Food and Drink') Food and Drink
+            a.wide(href='/mission' title='The Mission') The Mission
+          li.narrow
+            a#initialMobile.navOnClick(href='#menu') Menu
+        a#mobileNavButton.navOnClick(href='#menu' title='Show Menu')
+  ul#mobileNav
+    li
+      a.wide(class='$LinkingMode' href='$Link' title='$MenuTitle') $MenuTitle
+    li.close
+      a#closeMobileNav.navOnClick(href='#closeNav' title='close')
+        img(src='/images/close.png' alt='Close')
+  #overlay.navOnClick
+  footer
+    h3  The Well Coffee Shop, Hopton
+    p.small
+      | A not for profit coffeeshop, run by
+      a(href='http://highstreetchapel.org.uk/' title='High Street Chapel') High Street Chapel Hopton
+    p.small
+      | &copy; Copyright
+      span#dateNow
+      |  The Well Coffee Shop, All Rights Reserved.

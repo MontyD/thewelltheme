@@ -1,47 +1,18 @@
-//** Font
 @import url("https://fonts.googleapis.com/css?family=Raleway");
-//** Variables
-$whiteFont: #FAFAFA;
-$backgroundColor: #E0E0E0;
-$mainColor: #58412F;
-$darkColor: #161F32;
-$brightColor: #3A4355;
-$mediumColor: #3A4355;
-$darkHighligh: #0A1324;
-$subtleText: #9E9E9E;
-$documentWidth: 1200px;
-//** Mixims
-@mixin textShadow($amount) {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, $amount);
-}
-@mixin insetShadow($opacity) {
-  box-shadow: inset 0 0 5px 0 rgba(0,0,0, $opacity);
-}
+
+@import './colours';
+@import './mixins';
+@import './layout';
+@import './styles';
+
 //** Main declarations
-html {
-  height: 100%;
-  width: 100%;
-}
-body {
-  display: block;
-  position: static;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', Helvetic, sans-serif, arial;
-  color: $darkColor;
-  -webkit-font-smoothing: antialiased;
-  background: $backgroundColor;
-  text-align: center;
-  font-weight: normal !important;
-}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-weight: normal !important;
+  font-weight: normal;
 }
 h2 {
   font-size: 1.6em;
@@ -50,7 +21,7 @@ p {
   line-height: 160%;
 }
 a {
-  color: $mediumColor;
+  color: $medium-blue;
 }
 img {
   border: none;
@@ -62,7 +33,7 @@ span.vMiddle {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: $documentWidth;
+  max-width: $max-doc-width;
   text-align: center;
 }
 header {
@@ -82,11 +53,10 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: $mainColor;
+    background: $brown;
     transform: translateY(0);
     transition: transform 0.2s ease;
   }
-
 
   #mainLogo {
     display: block;
@@ -100,19 +70,14 @@ header {
     transition: none !important;
   }
 }
-.noJS {
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
+
 .noPadP {
   p {
     margin: 0;
     padding: 0;
   }
 }
+
 .contentSpacer {
   display: block;
   margin-top: 90px;
@@ -126,7 +91,7 @@ header {
   display: block;
   font-size: 1.2em;
   font-style: italic;
-  color: $subtleText;
+  color: $subtle-grey;
   margin: 15px auto 30px auto;
   font-family: "Raleway";
   line-height: 150%;
@@ -169,7 +134,7 @@ header {
   position: relative;
   padding: 0;
   text-align: left;
-  border-left: 3px solid $darkHighligh !important;
+  border-left: 3px solid $dark-blue !important;
   @media (max-width:600px) {
     width: 95%;
   }
@@ -185,7 +150,7 @@ header {
   h2 {
     position: relative;
     display: inline-block;
-    color: $whiteFont;
+    color: $off-white;
     background: rgba(10, 19, 36, 0.83);
     font-size: 2em;
     padding: 12px 30px;
@@ -205,7 +170,7 @@ header {
     display: block;
     font-style: italic;
     font-size: 0.8em;
-    color: $subtleText;
+    color: $subtle-grey;
     line-height: 90%;
   }
   hr {
@@ -241,13 +206,13 @@ header {
   float: left;
   text-align: left;
   margin-right: 10px;
-  border-left: 3px solid $darkHighligh !important;
+  border-left: 3px solid $dark-blue !important;
 }
 .right {
   position: relative;
   float: right;
   text-align: right;
-  border-right: 3px solid $darkHighligh !important;
+  border-right: 3px solid $dark-blue !important;
   h1,
   h2,
   h3,
@@ -260,21 +225,21 @@ header {
   min-height: 145px;
 }
 .whiteText {
-  color: $whiteFont;
+  color: $off-white;
 }
 .blink {
   animation: 1.2s blink infinite;
 }
 .alternativeTitle {
   font-family: "Raleway";
-  color: $subtleText;
+  color: $subtle-grey;
   font-size: 1.8em;
   text-shadow: none;
   margin-bottom: 0;
 }
 .page {
   margin: 40px 0;
-  background-color: $whiteFont;
+  background-color: $off-white;
   padding: 20px 0 30px;
   overflow: auto;
   box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
@@ -287,10 +252,10 @@ header {
   }
 }
 .page.map {
-  background: $brightColor;
+  background: $bright-blue;
   padding-top: 10px;
   padding-bottom: 0;
-  color: $whiteFont;
+  color: $off-white;
   text-align: left;
   @media (max-width: 550px) {
     text-align: center;
@@ -317,7 +282,7 @@ header {
   padding-bottom: 90px;
 }
 button,
-a.linkLikeAButton {
+a.button {
   display: inline-block;
   padding: 0.6em 1.6em;
   margin: 6px;
@@ -329,15 +294,15 @@ a.linkLikeAButton {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid $backgroundColor;
+  border: 1px solid $subtle-grey;
   cursor: pointer;
   box-sizing: border-box;
-  color: $whiteFont;
-  background-color: $mediumColor;
+  color: $off-white;
+  background-color: $medium-blue;
   transition: all 0.5s ease;
   @include textShadow(0.5);
   &:hover {
-    background-color: $darkHighligh;
+    background-color: $dark-blue;
   }
 }
 .fullwidth {
@@ -346,7 +311,7 @@ a.linkLikeAButton {
   width: 99%;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 3px solid $darkHighligh !important;
+  border-bottom: 3px solid $dark-blue !important;
 
   h1 {
     z-index: 2;
@@ -388,7 +353,7 @@ a.linkLikeAButton {
 }
 img.boxed {
   padding: 0.4em;
-  background: $whiteFont;
+  background: $off-white;
   box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
 }
 p.nextToImg {
@@ -398,8 +363,8 @@ p.nextToImg {
 }
 footer {
   margin-top: 40px;
-  background-color: $darkColor;
-  color: $whiteFont;
+  background-color: $dark-blue;
+  color: $off-white;
   @include insetShadow(0.3);
   h3 {
     margin: 0 auto;
@@ -409,7 +374,7 @@ footer {
     font-size: 1.6em;
   }
   a {
-    color: $whiteFont;
+    color: $off-white;
   }
   p.last {
     padding: 30px 0;
@@ -426,7 +391,7 @@ hr {
 .imageWithCaption {
   position: relative;
   display: inline-block;
-  background: $whiteFont;
+  background: $off-white;
   box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
   vertical-align: middle;
   padding: 0.4em;
@@ -452,8 +417,8 @@ hr {
     left: 0;
     right: 0;
     margin: 0 auto;
-    color: $whiteFont;
-    background: $darkHighligh;
+    color: $off-white;
+    background: $dark-blue;
     padding: 10px;
     transform: translateY(0);
     transition: transform 0.4s ease-in-out;
@@ -480,7 +445,7 @@ nav {
   display: inline-block;
   margin: 0 auto;
   position: relative;
-  background-color: $whiteFont;
+  background-color: $off-white;
   padding: 14px 6px;
   text-align: left;
   overflow: hidden;
@@ -499,7 +464,7 @@ nav {
     padding-right: 10px;
   }
   ul#desktopNav {
-    background: $whiteFont;
+    background: $off-white;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -507,8 +472,8 @@ nav {
       display: inline-block;
       margin: 0;
       a {
-        color: $mediumColor;
-        background-color: $whiteFont;
+        color: $medium-blue;
+        background-color: $off-white;
         text-decoration: none;
         font-size: 1.1em;
         padding: 0.5em;
@@ -516,8 +481,8 @@ nav {
         margin: 0;
         border-radius: 2px;
         &:hover {
-          color: $whiteFont;
-          background-color: $mediumColor;
+          color: $off-white;
+          background-color: $medium-blue;
         }
       }
     }
@@ -525,8 +490,8 @@ nav {
       vertical-align: baseline;
       a {
         &:hover {
-          color: $mediumColor;
-          background-color: $whiteFont;
+          color: $medium-blue;
+          background-color: $off-white;
         }
         padding-left: 0;
         padding-right: 15px;
@@ -601,7 +566,7 @@ header.headerSmall {
   position: fixed;
   height: 100%;
   width: 200px;
-  background: $darkHighligh;
+  background: $dark-blue;
   background-image: url('../images/cup.png');
   background-repeat: no-repeat;
   background-position: 100% 90%;
@@ -609,7 +574,7 @@ header.headerSmall {
   right: -250px;
   z-index: 9999;
   margin: 0;
-  color: $whiteFont;
+  color: $off-white;
   list-style-type: none;
   padding: 10% 10px 0;
   font-size: 1.2em;
@@ -638,13 +603,13 @@ header.headerSmall {
     }
   }
   a {
-    color: $whiteFont;
+    color: $off-white;
     text-decoration: none;
   }
 }
 .supplier {
   border: 1px solid #B1BBCF;
-  border-left: 3px solid $darkColor;
+  border-left: 3px solid $dark-blue;
   padding-bottom: 20px;
   @media (max-width: 850px) {
     text-align: center;
@@ -662,7 +627,7 @@ header.headerSmall {
   h3 {
     font-size: 1.4em;
     a {
-      color: $darkColor;
+      color: $dark-blue;
     }
   }
 }
@@ -744,7 +709,7 @@ table#openingTimes {
   position: relative;
   clear: both;
   margin: 5px 0;
-  background-color: $subtleText;
+  background-color: $subtle-grey;
   padding: 10px;
   transform: skewY(3deg);
   .container {
@@ -755,7 +720,7 @@ table#openingTimes {
 .innerContainer#foodList {
   text-align: right;
   border-left: none !important;
-  border-right: 3px solid $darkHighligh !important;
+  border-right: 3px solid $dark-blue !important;
 }
 .mission {
   @media (max-width:900px) {
@@ -791,7 +756,7 @@ table#openingTimes {
   text-align: justify;
   padding: 2px 0;
   font-size: 1.1em;
-  border-left: 3px solid $darkColor;
+  border-left: 3px solid $dark-blue;
   padding-left: 14px;
   margin: 10px 0;
 
@@ -839,7 +804,7 @@ form#MemberLoginForm_LoginForm {
       width: 50%;
       border-radius: 4px;
       padding: 5px;
-      border: 1px solid $darkColor;
+      border: 1px solid $dark-blue;
       &:focus {
         outline: none;
         border-color: blue;
@@ -868,13 +833,13 @@ form#MemberLoginForm_LoginForm {
 }
 @keyframes blink {
   0% {
-    color: $whiteFont;
+    color: $off-white;
   }
   50% {
     color: transparent;
   }
   100% {
-    color: $whiteFont;
+    color: $off-white;
   }
 }
 // media queries
