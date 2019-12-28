@@ -10,9 +10,26 @@ body {
   padding: 0;
 }
 
+.float-left {
+  margin: 0;
+  float: left;
+}
+
+.float-right {
+  margin: 0;
+  float: right;
+}
+
+hr {
+  clear: both;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   position: relative;
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 100%;
   max-width: $max-doc-width;
 }
@@ -57,3 +74,4 @@ body {
     }
   }
 }
+
