@@ -2,44 +2,47 @@ doctype html
 html
   include includes/head.html
 
-body
-  include includes/header.pug
-  +header(false)
-  section.container.flex-row
-    .box.left.flex-column
-      h1 The Well | Hopton
-      p.important Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat.
-    .box.small.flex-column.right
-      h2.center-text Opening Hours
-      table
-        tbody
-          tr
-            td Thursday
-            td.right-text 10:30am - 2.30pm
-          tr
-            td Friday
-            td.right-text 10:30am - 2.30pm
-          tr
-            td Saturday
-            td.right-text 10:30am - 2.30pm
-  .container-accent
-    section.container
-      .box.emphasis.flex-row
-        img.framed.flex-inline-child.small(src='/images/thewelloutside.jpg' alt='The Well Outside')
-        .flex-inline-child.center-text
-          p
-            | The Well is a not for profit voluntary run Coffee Shop in Hopton.
-            | Linked with High Street Chapel we are a group of Christians who will have the pleasure of serving you
-            | in an atmosphere of relaxed hospitality with friendly service and great value for money.
-            | You will be able to choose from a selection of homemade, fresh and local produce and a range of authentic
-            | barista style Fairtrade coffee and eco-friendly speciality teas.
-          p
-            | At The Well, if you are rushing in and out we can give you coffee or tea to go.
-            | Or if you have the time you can choose to sit quietly for as long as you like or chat with our volunteers.
-            | You will find us situated about 100 metres from High Street Chapel and opposite ‘The Vine’ pub.
-          p
-            a.button(href="foodanddrink.pug" title="Our Menu") Our Menu
-            a.button(href="mission.pug" title="Find Out More") Find Out More
+  body
+    include includes/header.pug
+    +header(false)
+    section.container.flex-row
+      .box.left.flex-column
+        h1 The Well | Hopton
+        p.important Come and have a taste of something wonderful at ‘The Well.’ We will be delighted to offer you your favourite Coffee or Tea and a bite to eat.
+      .box.small.flex-column.right
+        h2.center-text Opening Hours
+        table
+          tbody
+            tr
+              td Thursday
+              td.right-text 10:30am - 2.30pm
+            tr
+              td Friday
+              td.right-text 10:30am - 2.30pm
+            tr
+              td Saturday
+              td.right-text 10:30am - 2.30pm
+    .container-accent
+      section.container
+        .box.emphasis.flex-row
+          img.framed.flex-inline-child.small(src='/images/thewelloutside.jpg' alt='The Well Outside')
+          .flex-inline-child.center-text
+            p
+              | The Well is a not for profit voluntary run Coffee Shop in Hopton.
+              | Linked with High Street Chapel we are a group of Christians who will have the pleasure of serving you
+              | in an atmosphere of relaxed hospitality with friendly service and great value for money.
+              | You will be able to choose from a selection of homemade, fresh and local produce and a range of authentic
+              | barista style Fairtrade coffee and eco-friendly speciality teas.
+            p
+              | At The Well, if you are rushing in and out we can give you coffee or tea to go.
+              | Or if you have the time you can choose to sit quietly for as long as you like or chat with our volunteers.
+              | You will find us situated about 100 metres from High Street Chapel and opposite ‘The Vine’ pub.
+            p
+              a.button(href="foodanddrink.pug" title="Our Menu") Our Menu
+              a.button(href="mission.pug" title="Find Out More") Find Out More
+    .container.flex-row.centered
+      img.small.framed(src='/images/scones.jpg' alt='Scones and Cakes')
+      img.small.framed(src='/images/inside.jpg' alt='The Well Inside')
 
-  include includes/footer.pug
-  include includes/scripts.html
+    include includes/footer.pug
+    include includes/scripts.html
