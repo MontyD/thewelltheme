@@ -2,9 +2,9 @@
 
 $max-doc-width: 1200px;
 $mobile-width: 450px;
+$tablet-width: 775px;
 
 @import './colours';
-@import './mixins';
 @import './layout';
 @import './styles';
 @import './header';
