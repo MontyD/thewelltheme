@@ -1,9 +1,16 @@
 doctype html
 html
-  include includes/head.html
-
-body
-  include includes/header.pug
-  +header(true)
-  include includes/footer.pug
-  include includes/scripts.html
+    include includes/head.html
+    body
+        include includes/header.pug
+        +header(true)
+        .container
+            .box.emphasis
+                h1.title-emphasis The Food and Drink
+                p.important.center-text
+                    | We offer a range of high-quality food and drink, including made-to-order coffees and
+                    | an assortment of locally-sourced light meals.
+                .box.inner.left
+                    h2 The Drinks
+        include includes/footer.pug
+        include includes/scripts.html

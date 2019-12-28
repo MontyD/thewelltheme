@@ -1,6 +1,6 @@
 mixin header(small)
     header(class=small ? 'small' : '')
-        .container
+        .container(class=small ? 'condensed' : '')
             img(src='/images/TheWell-Logo.png' alt='The Well Logo')
             h2
                 span#typer(data-items='A Coffee Shop,A Place to Chat,A Place of Refreshing,A Resting-point')

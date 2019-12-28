@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,7 +18,7 @@ h5 {
   font-weight: normal;
 }
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 h2 {
   font-size: 1.6em;
@@ -28,7 +28,7 @@ p {
   line-height: 160%;
   &.important {
     color: $subtle-grey;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
   }
 }
@@ -42,105 +42,134 @@ img {
 }
 
 table {
-    border: none;
+  border: none;
 }
 td {
-    padding: .3rem;
+  padding: 0.3rem;
+}
+
+blockquote {
+    margin: 2rem 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: .2rem 1rem;
+    border-left: 3px solid $dark-blue;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 .right-text {
-    text-align: right;
+  text-align: right;
+}
+
+.title-emphasis {
+    text-align: center;
+    &:before {
+        content: ' ';
+        position: absolute;
+        width: 50%;
+        min-width: 350px;
+        background: transparentize($subtle-blue, 0.9);
+        height: 0.5rem;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        margin: 16px auto;
+    }
 }
 
 .box {
-    margin: 1rem;
-    min-width: 30%;
-    background: $white;
-    padding: 1rem;
-    box-shadow: $box-shadow;
+  margin: 1rem;
+  min-width: 30%;
+  background: $white;
+  padding: 1rem;
+  box-shadow: $box-shadow;
 
-    &.left {
-        border-left: 3px solid $dark-blue;
-    }
-    &.right {
-        border-right: 3px solid $dark-blue;
-    }
-    &.emphasis {
-        border-bottom: 3px solid $dark-blue;
-    }
-    &.dark {
-        background-color: $subtle-blue;
-        border: 1px solid $white;
-        color: $white;
-    }
+  &.left {
+    border-left: 3px solid $dark-blue;
+  }
+  &.right {
+    border-right: 3px solid $dark-blue;
+  }
+  &.emphasis {
+    border-bottom: 3px solid $dark-blue;
+  }
+  &.dark {
+    background-color: $subtle-blue;
+    border: 1px solid $white;
+    color: $white;
+  }
+  &.inner {
+      margin: 0.5rem auto;
+      max-width: 80%;
+  }
 }
 
 .container-accent {
-    position: relative;
-    margin: .5rem 0;
-    padding: 1rem;
+  position: relative;
+  margin: 0.5rem 0;
+  padding: 1rem;
 
-    &:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 
-        background-color: $subtle-grey;
-        transform: skewY(3deg);
-    }
+    background-color: $subtle-grey;
+    transform: skewY(3deg);
+  }
 }
 
 img {
-    object-fit: cover;
-    &.framed {
-        background: $white;
-        padding: 0.4rem;
-        box-shadow: $box-shadow;
-    }
-    &.small {
-        margin: 0 1rem;
-        max-width: 40%;
+  object-fit: cover;
+  &.framed {
+    background: $white;
+    padding: 0.4rem;
+    box-shadow: $box-shadow;
+  }
+  &.small {
+    margin: 0 1rem;
+    max-width: 40%;
 
-        @media (max-width: $tablet-width) {
-            max-width: 90%;
-            margin: 1rem;
-        }
+    @media (max-width: $tablet-width) {
+      max-width: 90%;
+      margin: 1rem;
     }
+  }
 }
 
 .button {
-    display: inline-block;
-    padding: .6em 1.6em;
-    margin: 1rem 0.5rem;
-    text-align: center;
-    font-size: 1em;
-    letter-spacing: .1rem;
+  display: inline-block;
+  padding: 0.6em 1.6em;
+  margin: 1rem 0.5rem;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.1rem;
 
-    text-transform: uppercase;
-    text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
 
-    border-radius: .2rem;
-    cursor: pointer;
-    color: $off-white;
-    background-color: $subtle-blue;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: $off-white;
+  background-color: $subtle-blue;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
-    transition: background-color .5s ease;
-    &:hover {
-        background-color: $dark-blue;
-    }
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: $dark-blue;
+  }
 }
 
 .map {
-    width: 100%;
-    height: 16rem;
-    margin: 0.5rem 0;
-    background-image: url('/images/map.png');
+  width: 100%;
+  height: 16rem;
+  margin: 0.5rem 0;
+  background-image: url("/images/map.png");
 }
+

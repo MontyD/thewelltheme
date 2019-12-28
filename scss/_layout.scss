@@ -32,6 +32,10 @@ hr {
   margin: 2rem auto;
   width: 100%;
   max-width: $max-doc-width;
+
+  &.condensed {
+    margin: .5rem auto;
+  }
 }
 
 .flex-column {

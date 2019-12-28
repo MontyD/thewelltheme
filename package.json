@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "parcel index.pug"
+    "build": "parcel build index.pug mission.pug foodanddrink.pug",
+    "dev": "parcel index.pug mission.pug foodanddrink.pug"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",

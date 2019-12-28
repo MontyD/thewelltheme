@@ -1,9 +1,50 @@
 doctype html
 html
-  include includes/head.html
+    include includes/head.html
+    body
+        include includes/header.pug
+        +header(true)
+        .container
+            .box.emphasis.center-text
+                h1.title-emphasis The Mission
+                p.important The Well was opened with the hope that we could grow the local community and share the message of Jesus.
+                .flex-row
+                    p
+                        | Staffed and run entirely by Christian volunteers from High Street Chapel Hopton,
+                        | the purpose of The Well has always been to provide a caring environment in which
+                        | everyone can come and grab a cup of coffee or a snack. We pray that The Well may
+                        | be a place of refreshing and rest for anyone that enters it. If you fancy a chat
+                        | our staff will love chatting to you, but equally if you'd like some peace and quiet
+                        | with your coffee we won't intrude. We love serving people and hope to see you soon.
+                    img.framed.small(src='/images/fairy-cakes.jpg' alt='Fairy Cakes')
+        .container-accent
+            .container
+                .box.emphasis
+                    h2.center-text Why 'The Well'?
+                    p.important.center-text The name comes from an encounter that Jesus had with a Samaritan woman, recorded in John 4:
+                    blockquote
+                        | Jesus, tired as he was from the journey, sat down by the well.
+                        | It was about noon. When a Samaritan woman came to draw water, Jesus said to her,
+                        | “Will you give me a drink?” (His disciples had gone into the town to buy food.)
+                        br
+                        br
+                        | The Samaritan woman said to him, “You are a Jew and I am a Samaritan woman. How can you ask me for a drink?”
+                        | (For Jews do not associate with Samaritans.) Jesus answered her, “If you knew the gift of God and who it is
+                        | that asks you for a drink, you would have asked him and he would have given you living water.”
+                        br
+                        br
+                        | “Sir,” the woman said, “you have nothing to draw with and the well is deep. Where can you get this living water?
+                        | Are you greater than our father Jacob, who gave us the well and drank from it himself, as did also his sons and
+                        | his livestock?”. Jesus answered, “Everyone who drinks this water will be thirsty again, but whoever drinks the
+                        | water I give them will never thirst. Indeed, the water I give them will become in them a spring of water welling
+                        | up to eternal life.”
+                    p.important.center-text
+                        | The woman in the story goes to the well for a drink but instead discovers living water as she experiences a
+                        | life-transforming encounter with Jesus.
+                    p.important.center-text
+                        | It is our prayer that you too will encounter Jesus, the giver of true life and only source of real refreshing.
 
-body
-  include includes/header.pug
-  +header(true)
-  include includes/footer.pug
-  include includes/scripts.html
+
+
+        include includes/footer.pug
+        include includes/scripts.html
