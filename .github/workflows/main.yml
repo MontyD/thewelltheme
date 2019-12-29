@@ -23,7 +23,7 @@ jobs:
         node-version: '12.x'
     - run: npm install
       if: steps.version-updated.outputs.has-updated
-    - run: npm run build && npm run zip-dist
+    - run: npm run build && npm run tar-dist
       if: steps.version-updated.outputs.has-updated
     - name: Create Release
       if: steps.version-updated.outputs.has-updated
