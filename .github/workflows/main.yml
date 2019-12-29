@@ -14,17 +14,17 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v1
-      if: ${{ steps.version-updated.outputs.has-updated }}
+      if: steps.version-updated.outputs.has-updated
     - uses: actions/setup-node@v1
-      if: ${{ steps.version-updated.outputs.has-updated }}
+      if: steps.version-updated.outputs.has-updated
       with:
         node-version: '12.x'
     - run: npm install
-      if: ${{ steps.version-updated.outputs.has-updated }}
+      if: steps.version-updated.outputs.has-updated
     - run: npm run build
-      if: ${{ steps.version-updated.outputs.has-updated }}
+      if: steps.version-updated.outputs.has-updated
     - name: Create GH release
-      if: ${{ steps.version-updated.outputs.has-updated }}
+      if: steps.version-updated.outputs.has-updated
       uses: softprops/action-gh-release@v0.1.0
       with:
         files: dist
