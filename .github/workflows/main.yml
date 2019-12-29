@@ -6,27 +6,42 @@ on:
       - master
 
 jobs:
-  build:
+  pubish-release-if-needed:
     runs-on: ubuntu-latest
     steps:
-    - uses: MontyD/package-json-updated-action@0.1.1
+    - uses: MontyD/package-json-updated-action@0.2.0
       id: version-updated
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v1
       if: steps.version-updated.outputs.has-updated
+      with:
+        fetch-depth: 1
     - uses: actions/setup-node@v1
       if: steps.version-updated.outputs.has-updated
       with:
         node-version: '12.x'
     - run: npm install
       if: steps.version-updated.outputs.has-updated
-    - run: npm run build
+    - run: npm run build && npm run zip-dist
       if: steps.version-updated.outputs.has-updated
-    - name: Create GH release
+    - name: Create Release
       if: steps.version-updated.outputs.has-updated
-      uses: softprops/action-gh-release@v1
-      with:
-        files: dist
+      id: create-release
+      uses: actions/create-release@v1.0.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.version-updated.outputs.current-package-version }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create-release.outputs.upload_url }}
+        asset_path: ./dist.tar.gz
+        asset_name: dist.tar.gz
+        asset_content_type: application/gzip
