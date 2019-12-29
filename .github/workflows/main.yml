@@ -25,7 +25,7 @@ jobs:
       if: steps.version-updated.outputs.has-updated
     - name: Create GH release
       if: steps.version-updated.outputs.has-updated
-      uses: softprops/action-gh-release@v0.1.0
+      uses: softprops/action-gh-release@v1
       with:
         files: dist
       env:
