@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: MontyD/package-json-updated-action@0.1.0
+    - uses: MontyD/package-json-updated-action@0.1.1
       id: version-updated
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
