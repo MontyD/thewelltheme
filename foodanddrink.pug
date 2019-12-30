@@ -10,7 +10,7 @@ html
                 p.important.center-text.half
                     | We offer a range of high-quality food and drink, including made-to-order coffees and
                     | an assortment of locally-sourced light meals.
-                .box.inner.left.full-width
+                .box.inner.left.no-padding
                     .image-heading.coffee
                         h2.text The Drinks
                     .flex-row.center-text
@@ -56,10 +56,52 @@ html
                         .flex-column-child.half.padded
                             p.emphasis.no-margin Sparkling spring water
                             p.no-margin.subtle £0.80
-                .box.inner.right
-
-        .container
-            .box.emphasis
-
+                .box.inner.right.no-padding
+                    .image-heading.cakes.right-text
+                        h2.text The Food
+                    .flex-row.center-text
+                        .flex-column-child.half.padded
+                            p.emphasis.no-margin Pastie and Salad
+                            p.no-margin.subtle £3.50
+                        .flex-column-child.half.padded
+                            p.emphasis.no-margin Sausage Roll and Salad
+                            p.no-margin.subtle £3.50
+                        .flex-column-child.half.padded
+                            p.emphasis.no-margin Fruit Scone (with Jam and Cream)
+                            p.no-margin.subtle £1.50
+                        .flex-column-child.half.padded
+                            p.emphasis.no-margin Victoria Sponge
+                            p.no-margin.subtle £1.50
+                        .flex-column-child.half.padded
+                            p.emphasis.no-margin Cheese Scone
+                            p.no-margin.subtle £1.50
+                        .flex-column-child.half.padded
+                            p.emphasis.no-margin A variety of home-made cakes and cookies
+                            p.no-margin.subtle £1 - £2.50
+        .container-accent
+            .container
+                .box.emphasis
+                    h1.title-emphasis Our Suppliers
+                    .box.inner.right.flex-row
+                        img.flex-inline-child.v-small.framed(src='/images/KC-logo.jpg')
+                        .flex-inline-child
+                            h2
+                                a(href='https://kingdomcoffee.co.uk/' title='Kingdom Coffee') Kingdom Coffee
+                            p
+                                | Kingdom Coffee is a Christian company, providing Fairtrade coffee and working
+                                | with charitable partners to ensure that the communities from coffee growing
+                                | regions are able to thrive and grow. For every case of coffee The Well buys
+                                | from Kingdom Coffee £5 is donated to The Toybox Charity. The Well buys all its
+                                | coffee beans and take away cups from Kingdom Coffee.
+                    .box.inner.right.flex-row
+                        img.flex-inline-child.v-small.framed(src='/images/teapigs-logo.jpg')
+                        .flex-inline-child
+                            h2
+                                a(href='https://www.teapigs.co.uk/' title='teapigs') teapigs
+                            p
+                                | As well as providing a range of excellent teas, Tea Pigs works to support the
+                                | communities in the areas where their tea is grown. As part of the Rainforest
+                                | Alliance, they are also working to ensure the sustainability of the areas
+                                | where their tea is grown. The Well sells a range of teas provided by Tea Pigs.
         include includes/footer.pug
         include includes/scripts.html

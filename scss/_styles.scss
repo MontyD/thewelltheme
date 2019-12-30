@@ -104,10 +104,9 @@ blockquote {
   background: $white;
   box-shadow: $box-shadow;
 
-  &.full-width {
+  &.no-padding {
     padding: 0;
   }
-
   &.left {
     border-left: 3px solid $dark-blue;
   }
@@ -123,7 +122,7 @@ blockquote {
     color: $white;
   }
   &.inner {
-    margin: .5rem auto;
+    margin: 1.5rem auto;
     max-width: 80%;
   }
 }
@@ -155,6 +154,15 @@ img {
 
     @media (max-width: $tablet-width) {
       max-width: 90%;
+      margin: 1rem;
+    }
+  }
+  &.v-small {
+    margin: 0 1rem;
+    max-width: 25%;
+
+    @media (max-width: $tablet-width) {
+      max-width: 40%;
       margin: 1rem;
     }
   }
@@ -194,6 +202,9 @@ img {
 
   &.coffee {
     background-image: url("/images/coffee.png");
+  }
+  &.cakes {
+    background-image: url("/images/cakes.png");
   }
 
   .text {
