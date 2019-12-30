@@ -97,7 +97,7 @@ blockquote {
   }
   &.dark {
     background-color: $subtle-blue;
-    border: 1px solid $white;
+    border: 1px solid $dark-blue;
     color: $white;
   }
   &.inner {
@@ -127,11 +127,6 @@ blockquote {
 
 img {
   object-fit: cover;
-  &.framed {
-    background: $white;
-    padding: 0.4rem;
-    box-shadow: $box-shadow;
-  }
   &.small {
     margin: 0 1rem;
     max-width: 40%;
@@ -141,6 +136,12 @@ img {
       margin: 1rem;
     }
   }
+}
+
+.framed {
+  background: $white;
+  padding: 0.4rem;
+  box-shadow: $box-shadow;
 }
 
 .button {
@@ -169,7 +170,6 @@ img {
 .map {
   width: 100%;
   height: 16rem;
-  margin: 0.5rem 0;
   background-image: url("/images/map.png");
 }
 

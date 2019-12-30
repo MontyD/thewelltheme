@@ -48,7 +48,10 @@ html
         h2.float-left Find Us
         p.float-right The Well, High Street, Hopton, Norfolk, IP22 2QX
         hr
-        #map.map
+        .framed
+          #map.map
 
     include includes/footer.pug
     include includes/scripts.html
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAW0lwXdtx9jEufQVgP-gqsaCl9wcFWaMA' async defer)
+
