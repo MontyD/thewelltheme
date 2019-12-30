@@ -26,9 +26,17 @@ h2 {
 
 p {
   line-height: 160%;
+
   &.important {
     color: $subtle-grey;
     font-size: 1.3rem;
+    font-style: italic;
+  }
+  &.emphasis {
+    font-size: 1.2rem;
+  }
+  &.subtle {
+    color: $subtle-grey;
     font-style: italic;
   }
 }
@@ -43,17 +51,25 @@ img {
 
 table {
   border: none;
+  width: 100%;
 }
 td {
-  padding: 0.3rem;
+  padding: .3rem;
 }
 
 blockquote {
-    margin: 2rem 0.5rem;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    padding: .2rem 1rem;
-    border-left: 3px solid $dark-blue;
+  margin: 2rem .5rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: .2rem 1rem;
+  border-left: 3px solid $dark-blue;
+}
+
+.padded {
+  padding: 1rem;
+}
+.no-margin {
+  margin: 0;
 }
 
 .center-text {
@@ -64,27 +80,33 @@ blockquote {
 }
 
 .title-emphasis {
-    text-align: center;
-    &:before {
-        content: ' ';
-        position: absolute;
-        width: 50%;
-        min-width: 350px;
-        background: transparentize($subtle-blue, 0.9);
-        height: 0.5rem;
-        left: 0;
-        right: 0;
-        z-index: 0;
-        margin: 16px auto;
-    }
+  text-align: center;
+  &:before {
+    content: " ";
+    position: absolute;
+    width: 50%;
+    min-width: 350px;
+    background: transparentize($subtle-blue, .9);
+    height: .5rem;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin: 16px auto;
+  }
 }
 
 .box {
-  margin: 1rem;
   min-width: 30%;
-  background: $white;
+
+  margin: 1rem;
   padding: 1rem;
+
+  background: $white;
   box-shadow: $box-shadow;
+
+  &.full-width {
+    padding: 0;
+  }
 
   &.left {
     border-left: 3px solid $dark-blue;
@@ -101,14 +123,14 @@ blockquote {
     color: $white;
   }
   &.inner {
-      margin: 0.5rem auto;
-      max-width: 80%;
+    margin: .5rem auto;
+    max-width: 80%;
   }
 }
 
 .container-accent {
   position: relative;
-  margin: 0.5rem 0;
+  margin: .5rem 0;
   padding: 1rem;
 
   &:before {
@@ -140,30 +162,48 @@ img {
 
 .framed {
   background: $white;
-  padding: 0.4rem;
+  padding: .4rem;
   box-shadow: $box-shadow;
 }
 
 .button {
   display: inline-block;
-  padding: 0.6em 1.6em;
-  margin: 1rem 0.5rem;
+  padding: .6em 1.6em;
+  margin: 1rem .5rem;
   text-align: center;
   font-size: 1em;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
 
   text-transform: uppercase;
   text-decoration: none;
 
-  border-radius: 0.2rem;
+  border-radius: .2rem;
   cursor: pointer;
   color: $off-white;
   background-color: $subtle-blue;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 
-  transition: background-color 0.5s ease;
+  transition: background-color .5s ease;
   &:hover {
     background-color: $dark-blue;
+  }
+}
+
+.image-heading {
+  padding: 0 .5rem;
+
+  &.coffee {
+    background-image: url("/images/coffee.png");
+  }
+
+  .text {
+    font-size: 2rem;
+    display: inline-block;
+    margin: .6rem;
+    padding: 1rem 2rem;
+
+    color: $white;
+    background-color: transparentize($dark-blue, .2);
   }
 }
 
@@ -171,5 +211,5 @@ img {
   width: 100%;
   height: 16rem;
   background-image: url("/images/map.png");
+  background-position: center;
 }
-

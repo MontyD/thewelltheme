@@ -23,7 +23,7 @@ body {
 hr {
   clear: both;
   border: none;
-  margin: 0;
+  margin: 0.5rem;
   padding: 0;
 }
 
@@ -34,7 +34,7 @@ hr {
   max-width: $max-doc-width;
 
   &.condensed {
-    margin: .5rem auto;
+    margin: 0.5rem auto;
   }
 }
 
@@ -43,7 +43,7 @@ hr {
   flex-direction: column;
   justify-content: center;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
   }
@@ -52,6 +52,7 @@ hr {
 .flex-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -59,23 +60,42 @@ hr {
     justify-content: center;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
   }
 }
 
 .flex-inline-child {
-  margin: 0.5rem 1rem;
   flex: 1 0 50%;
-  min-width: 0;
+  margin: 0.5rem 1rem;
+  width: 100%;
+}
 
-  &.small {
-    max-width: 30%;
+.flex-column-child {
+  display: flex;
+  flex: 1;
 
-    @media(max-width: $tablet-width) {
-      max-width: 90%;
-    }
+  flex-direction: column;
+  flex-basis: 100%;
+
+  width: 100%;
+}
+
+
+.half {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 50%;
+  max-width: 50%;
+
+  @media (max-width: $tablet-width) {
+    min-width: 90%;
+    max-width: 90%;
   }
 }
 
+.small {
+  min-width: 30%;
+  max-width: 30%;
+}
