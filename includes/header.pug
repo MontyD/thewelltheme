@@ -6,16 +6,22 @@ mixin header(small)
                 span#typer(data-items='A Coffee Shop,A Place to Chat,A Place of Refreshing,A Resting-point')
                 noscript A Coffee Shop
                 span.blink |
-            nav
-                ul.desktop-nav
-                    li.wide
+            nav(class=small ? 'condensed' : '')
+                ul.nav-bar
+                    li(class=small ? 'desktop' : 'wide')
                         a(href='/' title='Home') Home
-                    li.wide
+                    li(class=small ? 'desktop' : 'wide')
                         a(href='/foodanddrink.pug' title='Food and Drink') Food and Drink
-                    li.wide
+                    li(class=small ? 'desktop' : 'wide')
                         a(href='/mission.pug' title='The Mission') The Mission
-                    li.narrow
-                        a#open-menu(href='#menu' title='Open Menu') Menu
+                    if small
+                        li.tablet
+                            a#open-menu.open-menu(href='#menu' title='Open Menu')
+                                img(src='/images/menu.png' alt='Menu')
+                    else
+                        li.narrow
+                            a#open-menu(href='#menu' title='Open Menu') Menu
+
     //- ul#mobile-nav.mobile-nav
     //-     li
     //-         a(href='/' title='Home') Home

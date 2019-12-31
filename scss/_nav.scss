@@ -9,12 +9,23 @@ nav {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   transition: border-radius 0.4s linear;
 
+  &.condensed {
+    @media (max-width: $tablet-width) {
+      padding: 0.4rem 0.4rem 0.2rem 0;
+    }
+  }
+
   &:hover {
     border-radius: 0.2rem;
+
+    &.condensed {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 }
 
-.desktop-nav {
+.nav-bar {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -35,6 +46,19 @@ nav {
       }
     }
 
+    &.tablet {
+      display: none;
+      @media (max-width: $tablet-width) {
+        display: block;
+      }
+    }
+
+    &.desktop {
+      @media (max-width: $tablet-width) {
+        display: none;
+      }
+    }
+
     a {
       color: $medium-blue;
       text-decoration: none;
@@ -43,10 +67,24 @@ nav {
       transition: all 0.4s ease;
       margin: 0 0.2rem;
       border-radius: 0.1rem;
+
+      &.open-menu {
+        padding: 0;
+        margin: 0 .5rem 0 0;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
       &:hover {
         border-radius: 0.2rem;
         color: $off-white;
         background-color: $medium-blue;
+
+        &.open-menu {
+          background: none;
+        }
       }
     }
   }

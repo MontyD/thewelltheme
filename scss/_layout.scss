@@ -68,7 +68,7 @@ hr {
 
 .flex-inline-child {
   flex: 1 0 50%;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0;
   width: 100%;
 }
 
@@ -98,4 +98,9 @@ hr {
 .small {
   min-width: 30%;
   max-width: 30%;
+
+  @media (max-width: $tablet-width) {
+    max-width: 80%;
+    margin: 1rem;
+  }
 }

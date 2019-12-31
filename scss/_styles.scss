@@ -85,7 +85,7 @@ blockquote {
     content: " ";
     position: absolute;
     width: 50%;
-    min-width: 350px;
+    min-width: 100px;
     background: transparentize($subtle-blue, .9);
     height: .5rem;
     left: 0;
@@ -103,6 +103,10 @@ blockquote {
 
   background: $white;
   box-shadow: $box-shadow;
+
+  @media (max-width: $mobile-width) {
+    margin: 2rem 0;
+  }
 
   &.no-padding {
     padding: 0;
@@ -130,7 +134,7 @@ blockquote {
 .container-accent {
   position: relative;
   margin: .5rem 0;
-  padding: 1rem;
+  padding: 1rem 0;
 
   &:before {
     content: " ";
@@ -148,13 +152,15 @@ blockquote {
 
 img {
   object-fit: cover;
+
   &.small {
     margin: 0 1rem;
     max-width: 40%;
 
     @media (max-width: $tablet-width) {
-      max-width: 90%;
+      max-width: 70%;
       margin: 1rem;
+      min-width: 150px;
     }
   }
   &.v-small {
@@ -164,6 +170,7 @@ img {
     @media (max-width: $tablet-width) {
       max-width: 40%;
       margin: 1rem;
+      min-width: 150px;
     }
   }
 }
