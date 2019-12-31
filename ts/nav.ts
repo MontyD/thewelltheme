@@ -15,7 +15,7 @@ export const setupNavHandlingActions = () => {
         return;
     }
 
-    document.querySelectorAll('[data-toggle-nav]').forEach(item => {
+    ([] as Element[]).slice.call(document.querySelectorAll('[data-toggle-nav]')).forEach(item => {
         item.addEventListener('click', e => {
             e.preventDefault();
             toggleNav({ overlayElement, navElement });

@@ -44,7 +44,6 @@ hr {
   justify-content: center;
 
   @media (max-width: $tablet-width) {
-    flex-direction: column;
     align-items: center;
   }
 }
@@ -62,14 +61,13 @@ hr {
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
-    align-items: center;
   }
 }
 
 .flex-inline-child {
-  flex: 1 0 50%;
-  margin: 0.5rem 0;
-  width: 95%;
+  flex: 1 0 0;
+  margin: 0.5rem auto;
+  max-width: 95%;
 }
 
 .flex-column-child {

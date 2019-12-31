@@ -155,6 +155,8 @@ blockquote {
 }
 
 img {
+  object-position: center;
+  object-fit: fill; // for IE11
   object-fit: cover;
 
   &.small {

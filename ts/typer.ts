@@ -41,7 +41,7 @@ const runTyper = async (targetElement: HTMLElement, options: TyperOptions) => {
 }
 
 export const runTypers = ({ typeSpeed = 100, deleteSpeed = 50, deleteAfter = 2000, pauseAfterPhrase = 300 }: Partial<TyperOptions> = {}) => {
-    document.querySelectorAll('[data-typer]').forEach(item => {
+    ([] as Element[]).slice.call(document.querySelectorAll('[data-typer]')).forEach(item => {
         runTyper(item as HTMLElement, { typeSpeed, deleteSpeed, deleteAfter, pauseAfterPhrase });
     });
 };
