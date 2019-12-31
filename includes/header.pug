@@ -1,9 +1,10 @@
 mixin header(small)
     header(class=small ? 'condensed' : '')
         .container(class=small ? 'condensed' : '')
-            img(src='/images/TheWell-Logo.png' alt='The Well Logo')
+            a(href='/' title='Home')
+                img(src='/images/TheWell-Logo.png' alt='The Well Logo')
             h2
-                span#typer(data-items='A Coffee Shop,A Place to Chat,A Place of Refreshing,A Resting-point')
+                span(data-typer data-items='A Coffee Shop,A Place to Chat,A Place of Refreshing,A Resting-point')
                 noscript A Coffee Shop
                 span.blink |
             nav(class=small ? 'condensed' : '')
@@ -16,20 +17,21 @@ mixin header(small)
                         a(href='/mission.pug' title='The Mission') The Mission
                     if small
                         li.tablet
-                            a#open-menu.open-menu(href='#menu' title='Open Menu')
+                            a.open-menu(href='#menu' title='Open Menu' data-toggle-nav)
                                 img(src='/images/menu.png' alt='Menu')
                     else
                         li.narrow
-                            a#open-menu(href='#menu' title='Open Menu') Menu
+                            a(href='#menu' title='Open Menu' data-toggle-nav) Menu
 
-    //- ul#mobile-nav.mobile-nav
-    //-     li
-    //-         a(href='/' title='Home') Home
-    //-     li
-    //-         a(href='/foodanddrink.pug' title='Food and Drink') Food and Drink
-    //-     li
-    //-         a(href='/mission.pug' title='The Mission') The Mission
-    //-     li.close
-    //-         a#close-mobile-nav.navOnClick(href='#closeNav' title='close')
-    //-             img(src='/images/close.png' alt='Close')
-    //- #overlay
+    aside.mobile-nav(data-mobile-nav)
+        .close
+            a(href='#closeNav' title='close' data-toggle-nav)
+                img(src='/images/close.png' alt='Close')
+        ul
+            li
+                a(href='/' title='Home') Home
+            li
+                a(href='/foodanddrink.pug' title='Food and Drink') Food and Drink
+            li
+                a(href='/mission.pug' title='The Mission') The Mission
+    .overlay(data-toggle-nav data-overlay)
