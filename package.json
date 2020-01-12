@@ -1,6 +1,6 @@
 {
   "name": "the-well",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "private": true,
   "scripts": {
     "build": "parcel build --public-url . index.pug mission.pug foodanddrink.pug",
@@ -11,8 +11,13 @@
     "@types/googlemaps": "^3.39.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-ogimage": "^1.1.0",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "pug": "^2.0.4",
     "sass": "^1.23.7",
     "typescript": "^3.7.4"
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
   }
 }
