@@ -1,0 +1,16 @@
+[{
+    "Condition": {
+        "KeyPrefixEquals": "foodanddrink"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "foodanddrink.html"
+    }
+},
+{
+    "Condition": {
+        "KeyPrefixEquals": "mission"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "mission.html"
+    }
+]
