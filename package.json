@@ -1,11 +1,11 @@
 {
   "name": "the-well",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "private": true,
   "scripts": {
     "build": "parcel build --public-url . index.pug mission.pug foodanddrink.pug",
     "dev": "parcel index.pug mission.pug foodanddrink.pug ",
-    "tar-dist": "cp route-rules dist/route-rules && rm -f dist.tar.gz && tar -zcvf dist.tar.gz dist"
+    "tar-dist": "cp route-rules.json dist/route-rules && rm -f dist.tar.gz && tar -zcvf dist.tar.gz dist"
   },
   "devDependencies": {
     "@types/googlemaps": "^3.39.0",
