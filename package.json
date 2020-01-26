@@ -1,6 +1,6 @@
 {
   "name": "the-well",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "private": true,
   "scripts": {
     "build": "parcel build *.pug",

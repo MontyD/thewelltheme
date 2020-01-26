@@ -35,7 +35,11 @@ export const initMap = () => {
     // https://developers.google.com/maps/documentation/javascript/events#auth-errors
     (window as EnhancedWindow).gm_authFailure = () => {
         console.error('Caught map load error - falling back to image');
-        mapElement?.parentElement?.removeChild(mapElement);
-        mapElement?.parentElement?.appendChild(mapElement);
+
+        const fallbackElement = document.createElement('div');
+        fallbackElement.className = 'map-fallback';
+
+        mapElement?.parentNode?.appendChild(fallbackElement);
+        mapElement?.parentNode?.removeChild(mapElement);
     };
 };
