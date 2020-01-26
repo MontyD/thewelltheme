@@ -1,0 +1,17 @@
+doctype html
+html
+  include includes/head.html
+
+  body
+    include includes/header.pug
+    +header(true)
+
+    .container
+        .box.emphasis
+            h1.title-emphasis Not Found
+            p.center-text.half The requested page could not be found.
+            p.center-text.half Please use the menu above to navigate to another page.
+
+
+    script(src="/ts/redirect-known-pages.ts")
+    include includes/scripts.html
